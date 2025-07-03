@@ -1,0 +1,27 @@
+<h3>Person List</h3>
+<a  class="btn btn-primary btn-sm mb-3" >Add Personne</a>
+<table style="width:80%" border="1"
+       class = "table table-striped table-responsive-md">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Age</th>
+        <th>Clasee</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p:${personnes}">
+        <td th:text="${p.getNom()}"></td>
+        <td th:text="${p.getPrenom()}"></td>
+        <td th:text="${p.getAge()}"></td>
+        <td th:text="${p.getClasse()}"></td>
+        <td> <a
+                class="btn btn-primary">Update</a>
+            <a
+               class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
