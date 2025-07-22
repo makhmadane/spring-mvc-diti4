@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Formulaire Utilisateur</title></head>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<body>
+<h2 th:text="${personne.id} != null ? 'Modifier Utilisateur' : 'Ajouter Utilisateur'"></h2>
+
+<form th:action="@{/personne/save}" th:object="${personne}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <label>Nom:</label> <input type="text" th:field="*{nom}" class="form-control" /><br/>
+    <label>Prénom:</label> <input type="text" th:field="*{prenom}"  class="form-control" /><br/>
+    <label>Prénom:</label> <input type="text" th:field="*{classe}"  class="form-control" /><br/>
+    <label>Âge:</label> <input type="number" th:field="*{age}"  class="form-control" /><br/>
+    <button type="submit" th:text="${personne.id != null ? 'Modifier ' : 'Enregistrer'}" class="btn btn-success" ></button>
+</form>
+
+<a th:href="@{/users}">Retour à la liste</a>
+</body>
+</html>

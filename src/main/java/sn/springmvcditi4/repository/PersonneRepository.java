@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface PersonneRepository extends JpaRepository<Personne, Integer> {
-    List<Personne> findByNomAndPrenom(String nom, String prenom);
+    List<Personne> findByNomOrPrenom(String nom, String prenom);
+    List<Personne> findByNomContainingIgnoreCaseOrPrenomContainsIgnoreCase(String nom, String prenom);
 
 }

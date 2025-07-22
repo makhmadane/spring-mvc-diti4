@@ -20,7 +20,7 @@ public class SpringMvcDiti4Application {
            // personneRepository.save(new Personne("Jack", "Bauer",20, "DITI4"));
             //personneRepository.save(new Personne("Jack", "Bauer",20, "DITI4"));
 
-            System.out.println(personneRepository.findByNomAndPrenom("Jack", "Bauer").size());
+           // System.out.println(personneRepository.findByNomAndPrenom("Jack", "Bauer").size());
 
         };
     }
